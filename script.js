@@ -23,12 +23,27 @@ const users = [
 // 2
 
 function getUsersNames(users) {
-  const solution = [];
+  const ats = [];
 
   for (let i = 0, length = users.length; i < length; i++) {
-    solution.push(users[i].name);
+    ats.push(users[i].name);
   }
-  return solution;
+  return ats;
 }
 
 console.log(getUsersNames(users));
+
+// 1
+
+function getUserAverageAge(users) {
+  let ats;
+  let sum = 0;
+
+  for (let i = 0, length = users.length; i < length; i++) {
+    sum = sum + users[i].age;
+  }
+  ats = sum / users.length;
+  return ats;
+}
+
+console.log(getUserAverageAge(users));
